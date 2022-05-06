@@ -2,10 +2,9 @@ version: '3'
 services:
   chain0: 
     image: sadfroghk/chain0
+    network_mode: host
     container_name: chain0
     restart: unless-stopped
     command: bash /root/init.sh node
-    ports:
-      - 26656:26656
     environment:
       - MONIKER=YOURMONIKERNAME
